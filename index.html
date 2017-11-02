@@ -28,8 +28,10 @@
     </footer>
     <script type="text/template" id="item-template">
         <div class="view">
-            <input class="toggle" type="checkbox" <%=c ompleted ? 'checked' : '' %>>
-            <label><%- title %></label>
+            <input class="toggle" type="checkbox" <%=completed ? 'checked' : '' %>>
+            <label><%- title %><%=completed ? ' -- done!' : '' %></label>
+            <!--add an edit button-->
+            <button class="edit-btn"></button>
             <button class="destroy"></button>
         </div>
         <input class="edit" value="<%- title %>">
